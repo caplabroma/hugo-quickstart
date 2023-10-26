@@ -68,21 +68,6 @@
   document.addEventListener('smartbanner.view', function() { console.log('smartbanner.view'); });
   document.addEventListener('smartbanner.exit', function() { console.log('smartbanner.exit'); });
   document.addEventListener('smartbanner.clickout', function() { console.log('smartbanner.clickout'); });
-
-  var profile = "instagram://user?username=johndoe"
-var instagramUrl = NSURL(string: profile)
-
-if UIApplication.sharedApplication().canOpenURL(instagramUrl!) {  
-    UIApplication.sharedApplication().openURL(instagramUrl!)
-
-} else {
-    //redirect to safari because the user doesn't have Instagram
-    UIApplication.sharedApplication().openURL(NSURL(string: "http://instagram.com/")!)
-}
-  
-  
-  
-  
 </script>
 
         </div>
