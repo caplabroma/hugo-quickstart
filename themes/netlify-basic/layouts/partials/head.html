@@ -30,14 +30,3 @@
 </head>
 
 
-<script>
-  if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-location.replace("com.myapp://");setTimeout(function() {
-                if (!document.webkitHidden) {
-                    location.replace("https://itunes.apple.com/app/facebook/id284882215");
-                }            }, 25);}else if ((navigator.userAgent.match(/android/i)) || (navigator.userAgent.match(/Android/i))) {
-location.replace("https://play.google.com/store/apps/details?id=packagename&hl=en");}
-else  {
-location.replace("http://www.example.com");}
-  
-</script>
