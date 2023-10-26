@@ -69,14 +69,15 @@
   document.addEventListener('smartbanner.exit', function() { console.log('smartbanner.exit'); });
   document.addEventListener('smartbanner.clickout', function() { console.log('smartbanner.clickout'); });
 
-  if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-	location.replace("com.myapp://");setTimeout(function() {
-	                if (!document.webkitHidden) {
-	                    location.replace("https://itunes.apple.com/app/posteid/id649492675");
-	                }            }, 25);}else if ((navigator.userAgent.match(/android/i)) || (navigator.userAgent.match(/Android/i))) {
-	location.replace("https://play.google.com/store/apps/details?id=packagename&hl=en");}
-	else  {
-	location.replace("http://www.example.com");
+  var profile = "instagram://user?username=johndoe"
+var instagramUrl = NSURL(string: profile)
+
+if UIApplication.sharedApplication().canOpenURL(instagramUrl!) {  
+    UIApplication.sharedApplication().openURL(instagramUrl!)
+
+} else {
+    //redirect to safari because the user doesn't have Instagram
+    UIApplication.sharedApplication().openURL(NSURL(string: "http://instagram.com/")!)
 }
   
   
